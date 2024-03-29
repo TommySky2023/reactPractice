@@ -1,7 +1,11 @@
 body {
   font-family: "Arial", "Hiragino Mincho Pro";
-  color: #0021ff;
-  background-color: #faf0c0;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  padding: 10px 0;
 }
 
 h1 {
@@ -9,26 +13,73 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
-.img {
-  width: 300px;
-  height: 118px;
+p {
+  padding: 5px 0;
 }
 
 .header {
   display: flex;
 }
+
 .header > nav > ul {
   display: flex;
 }
+
 .header > nav > ul > li {
-  margin-left: 30px;
-  list-style: none;
+  margin: 0 10px;
+  width: 200px;
+  text-align: center;
 }
 
-.strong {
-  color: #ff0000;
-  font-weight: bold;
+.header > nav > ul > li > a {
+  display: block;
+  padding: 18px 0;
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #fff;
+}
+.header > nav > ul > li > a:hover {
+  opacity: 0.5;
+}
+
+.header,
+.main,
+.footer {
+  width: 960px;
+  margin: 10px auto;
+}
+
+.main {
+  margin-top: 30px;
+}
+
+.main > article > section {
+  margin-top: 30px;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 400px 300px;
+  gap: 48px;
+}
+
+.main a {
+  text-decoration: underline;
+  color: #3a66f9;
+}
+.main a:hover {
+  opacity: 0.5;
+}
+
+.main ul {
+  list-style: disc;
+  margin: 15px;
+}
+
+.footer {
+  text-align: right;
 }
