@@ -78,57 +78,57 @@
 
 // // numbers = [1, 2, 3, 4, 5];
 
-let age = 17;
-if (age < 18) {
-  console.log("未成年です");
-} else {
-  console.log("成人です");
-}
+// let age = 17;
+// if (age < 18) {
+//   console.log("未成年です");
+// } else {
+//   console.log("成人です");
+// }
 
-let day = "火曜日";
-switch (day) {
-  case "月曜日":
-    console.log("月曜日です");
-    break;
-  case "火曜日":
-    console.log("火曜日です");
-    break;
-  case "水曜日":
-    console.log("水曜日です");
-    break;
-  case "木曜日":
-    console.log("木曜日です");
-    break;
-  case "金曜日":
-    console.log("金曜日です");
-    break;
-  default:
-    console.log("土日です");
-}
+// let day = "火曜日";
+// switch (day) {
+//   case "月曜日":
+//     console.log("月曜日です");
+//     break;
+//   case "火曜日":
+//     console.log("火曜日です");
+//     break;
+//   case "水曜日":
+//     console.log("水曜日です");
+//     break;
+//   case "木曜日":
+//     console.log("木曜日です");
+//     break;
+//   case "金曜日":
+//     console.log("金曜日です");
+//     break;
+//   default:
+//     console.log("土日です");
+// }
 
-for (let i = 0; i < 5; i++) {
-  console.log("現在の値は: " + i);
-}
+// for (let i = 0; i < 5; i++) {
+//   console.log("現在の値は: " + i);
+// }
 
 // const fruits = ["りんご", "バナナ", "オレンジ"];
 // for (let fruit of fruits) {
 //   console.log("フルーツ: " + fruit);
 // }
 
-const person = {
-  name: "太郎",
-  age: 25,
-  city: "東京",
-};
-for (let key in person) {
-  console.log(key + ": " + person[key]);
-}
+// const person = {
+//   name: "太郎",
+//   age: 25,
+//   city: "東京",
+// };
+// for (let key in person) {
+//   console.log(key + ": " + person[key]);
+// }
 
-for (let i = 1; i <= 10; i++) {
-  if (i % 2 === 0) {
-    console.log(i + " は偶数です");
-  }
-}
+// for (let i = 1; i <= 10; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i + " は偶数です");
+//   }
+// }
 
 // const numbers = [10, 20, 30, 40, 50];
 
@@ -142,68 +142,169 @@ for (let i = 1; i <= 10; i++) {
 //   }
 // }
 
-const fruits = [
-  "りんご",
-  "バナナ",
-  "オレンジ",
-  "パイナップル",
-  "りんごジュース",
-];
+// const fruits = [
+//   "りんご",
+//   "バナナ",
+//   "オレンジ",
+//   "パイナップル",
+//   "りんごジュース",
+// ];
 
-for (let fruit of fruits) {
-  if (fruit.includes("りんご")) {
-    console.log(fruit);
-  }
-}
+// for (let fruit of fruits) {
+//   if (fruit.includes("りんご")) {
+//     console.log(fruit);
+//   }
+// }
 
 // 配列をfor文でループして特定の範囲の条件の場合だけ出力する
-const numbers = [5, 12, 3, 8, 20, 9];
+// const numbers = [5, 12, 3, 8, 20, 9];
 
-for (let num of numbers) {
-  if (num >= 10 && num <= 15) {
-    console.log(num);
-  }
+// for (let num of numbers) {
+//   if (num >= 10 && num <= 15) {
+//     console.log(num);
+//   }
+// }
+
+// console.log("===========");
+
+// const people = [
+//   { name: "太郎", age: 25, city: "東京" },
+//   { name: "花子", age: 30, city: "大阪" },
+//   { name: "次郎", age: 17, city: "名古屋" },
+// ];
+
+// for (let person of people) {
+//   if (person.age >= 18) {
+//     console.log(person.name + "さんは成人です");
+//   } else {
+//     console.log(person.name + "さんは未成年です");
+//   }
+// }
+
+// console.log("============================================");
+
+// const zoo = [
+//   [
+//     { species: "ライオン", habitat: "サバンナ", sound: "ガオー" },
+//     { species: "ゾウ", habitat: "ジャングル", sound: "パオーン" },
+//   ],
+//   [
+//     { species: "キリン", habitat: "草原", sound: "モーモー" },
+//     { species: "サル", habitat: "森林", sound: "ウキキ" },
+//   ],
+// ];
+
+// for (let i = 0; i < zoo.length; i++) {
+//   console.log("エリア " + (i + 1) + " の動物:");
+//   console.log("======================");
+
+//   for (let j = 0; j < zoo[i].length; j++) {
+//     console.log("種類: " + zoo[i][j].species);
+//     console.log("生息地: " + zoo[i][j].habitat);
+//     console.log("鳴き声: " + zoo[i][j].sound);
+
+//     console.log("--------------------");
+//   }
+//   console.log("======================");
+// }
+
+// 関数の定義
+// function greet() {
+//   console.log("Hello, world!");
+//   console.log("Hello, world!2");
+// }
+
+// 関数の呼び出し
+// greet(); // 出力: Hello, world!
+// greet();
+// greet();
+// greet();
+
+// パラメータを持つ関数の定義
+// function greet(name) {
+//   console.log("Hello, " + name + "!");
+// }
+
+// 異なる引数で関数を呼び出す
+// greet("Alice"); // 出力: Hello, Alice!
+// greet("Bob"); // 出力: Hello, Bob!
+// greet("Yamada Taro");
+
+// 戻り値を持つ関数の定義
+// function add(x, y) {
+//   return x + y;
+// }
+
+// let result = add(5, 3);
+// console.log(result); // 8
+
+// let result2 = add(1000, 111);
+// console.log(result2); // 1111
+
+// function filterNamesBySubstring(names, substring) {
+//   const filteredNames = [];
+
+//   for (let i = 0; i < names.length; i++) {
+//     if (names[i].includes(substring)) {
+//       filteredNames.push(names[i]);
+//     }
+//   }
+
+//   return filteredNames;
+// }
+
+// const namesArray = ["Alice", "Bob", "Charlie", "David", "Eve"];
+// const result = filterNamesBySubstring(namesArray, "a");
+// console.log(result); // 出力: ["Charlie", "David"]
+
+// const result1 = filterNamesBySubstring(namesArray, "i");
+// console.log(result1);
+
+// const add = function (a, b) {
+//   return a + b;
+// };
+
+// const subtract = function (a, b) {
+//   return a - b;
+// };
+
+// const calculate = {
+//   add: add,
+//   subtract: subtract,
+// };
+
+// const result1 = calculate.add(10, 15);
+// console.log(result1);
+
+// const result2 = calculate.subtract(10, 15);
+// console.log(result2);
+
+// const addHundred = (a) => a + 100;
+
+// const result = addHundred(10);
+// console.log(result);
+
+// const result2 = addHundred(100);
+// console.log(result2);
+
+// function outerFunc() {
+//   let value = 1;
+//   function innerFunc() {
+//     // let value = 10;
+//     value++;
+//     console.log(value);
+//   }
+//   innerFunc();
+// }
+// outerFunc(); // 2
+
+function greeting(name) {
+  alert(`Hello, ${name}`);
 }
 
-console.log("===========");
-
-const people = [
-  { name: "太郎", age: 25, city: "東京" },
-  { name: "花子", age: 30, city: "大阪" },
-  { name: "次郎", age: 17, city: "名古屋" },
-];
-
-for (let person of people) {
-  if (person.age >= 18) {
-    console.log(person.name + "さんは成人です");
-  } else {
-    console.log(person.name + "さんは未成年です");
-  }
+function processUserInput(callback) {
+  const name = prompt("Please enter your name.");
+  callback(name);
 }
 
-console.log("============================================");
-
-const zoo = [
-  [
-    { species: "ライオン", habitat: "サバンナ", sound: "ガオー" },
-    { species: "ゾウ", habitat: "ジャングル", sound: "パオーン" },
-  ],
-  [
-    { species: "キリン", habitat: "草原", sound: "モーモー" },
-    { species: "サル", habitat: "森林", sound: "ウキキ" },
-  ],
-];
-
-for (let i = 0; i < zoo.length; i++) {
-  console.log("エリア " + (i + 1) + " の動物:");
-  console.log("======================");
-
-  for (let j = 0; j < zoo[i].length; j++) {
-    console.log("種類: " + zoo[i][j].species);
-    console.log("生息地: " + zoo[i][j].habitat);
-    console.log("鳴き声: " + zoo[i][j].sound);
-
-    console.log("--------------------");
-  }
-  console.log("======================");
-}
+processUserInput(greeting);
