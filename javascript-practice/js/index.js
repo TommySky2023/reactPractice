@@ -298,13 +298,124 @@
 // }
 // outerFunc(); // 2
 
-function greeting(name) {
-  alert(`Hello, ${name}`);
-}
+// function greeting(name) {
+//   alert(`Hello, ${name}`);
+// }
 
-function processUserInput(callback) {
-  const name = prompt("Please enter your name.");
-  callback(name);
-}
+// function processUserInput(callback) {
+//   const name = prompt("Please enter your name.");
+//   callback(name);
+// }
 
-processUserInput(greeting);
+// processUserInput(greeting);
+
+// const str = "123";
+
+// console.log(str); // 出力: "123"
+
+// console.log(parseInt(str)); // 出力: 123
+
+// // 浮動小数点値に変換
+// console.log(parseFloat("123.45")); // 出力: 123.45
+
+// // 文字列は無視される
+// console.log(parseInt("123abc")); // 出力: 123
+
+// const count = 10;
+// console.log(count.toString()); // "10"
+
+// console.log((17).toString()); // "17"
+
+// console.log((17.2).toString()); // "17.2"
+
+// let greeting = " Hello World! ";
+
+// console.log(greeting); // 出力: " Hello World! "
+
+// console.log(greeting.trim()); // 出力: "Hello World!"
+
+// console.log(greeting.toUpperCase()); // 出力: " HELLO WORLD! "
+
+// console.log(greeting.includes("World")); // 出力: true
+
+// console.log(greeting.split(" ")); //出力: (4)['', 'Hello', 'World!', '']
+
+// let phoneNumber = "080-1122-3344";
+// console.log(phoneNumber.split("-"));
+
+// console.log(Math.round(57.712134782005423)); // 出力: 58
+
+// console.log(Math.max(5, 10, 15)); // 出力: 15
+
+// console.log(Math.random()); // 出力: 0.0から1.0未満のランダムな数
+
+// let today = new Date();
+// console.log(today.toString()); // 出力: 現在の日付と時刻
+
+// console.log(today.getFullYear()); // 出力: 年を取得
+
+// let fruits = ["Apple", "Banana"];
+
+// console.log(fruits); // 出力: ['Apple', 'Banana']
+
+// fruits.push("Orange"); // Orangeを追加
+// console.log(fruits); // 出力: ['Apple', 'Banana', 'Orange']
+
+// fruits.pop(); // 最後の要素Orangeを削除
+// console.log(fruits); // 出力: ['Apple', 'Banana']
+
+// numbers.forEach((number, index) => {
+//   console.log(index, number);
+// });
+
+// let peaple = ["yamada", "tanaka", "akiyama", "ota"];
+
+// peaple.forEach((person, index) => {
+//   console.log(index, person);
+// });
+
+// let doubled = numbers.map((x) => x * 2); // 各要素を2倍にする
+// console.log(doubled); // 出力: [2, 4, 6, 8]
+
+// let numbers = [1, 2, 3, 4];
+
+// let evens = numbers.filter((x) => x % 2 === 0); // 偶数だけを取得
+// console.log(evens); // 出力: [2, 4]
+
+// const filterNamesBySubstring = (names, substring) =>
+//   names.filter((name) => name.includes(substring));
+
+// const namesArray = ["Alice", "Bob", "Charlie", "David", "Eve"];
+// const result = filterNamesBySubstring(namesArray, "a");
+// console.log(result); // 出力: ["Charlie", "David"]
+
+// let user = {
+//   name: "Alice",
+//   age: 25,
+//   isAdmin: true,
+// };
+
+// // オブジェクトのすべてのキー（プロパティ名）を配列として取得します。
+// console.log(Object.keys(user)); // 出力: ['name', 'age', 'isAdmin']
+
+// // オブジェクトのすべての値を配列として取得します。
+// console.log(Object.values(user)); // 出力: ['Alice', 25, true]
+
+// // オブジェクトのキーと値のペアを配列の形で取得します。各ペアはさらに配列として格納されています。
+// console.log(Object.entries(user)); // 出力: [['name', 'Alice'], ['age', 25], ['isAdmin', true]]
+
+// 従業員データを格納したオブジェクト
+const employees = {
+  Alice: { department: "Engineering", salary: 75000 },
+  Bob: { department: "HR", salary: 45000 },
+  Carol: { department: "Marketing", salary: 55000 },
+  David: { department: "Engineering", salary: 60000 },
+};
+
+console.log(employees);
+
+const highEarningEmployees = Object.entries(employees)
+  .filter(([name, details]) => details.salary >= 50000)
+  .map(([name, details]) => ({ name: name, salary: details.salary }));
+
+console.log(highEarningEmployees);
