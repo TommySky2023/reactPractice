@@ -1,3 +1,9 @@
 .highlight {
   background-color: aqua;
 }
+
+#my-div {
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+}

@@ -465,20 +465,61 @@
 //     '<p class="highlight" style="color: red;">これはInnerHtmlで挿入された新しい段落です。</p>';
 // });
 
+// document.addEventListener("DOMContentLoaded", () => {
+// const divElem = document.getElementById("test-id");
+
+// const paragraphElem = document.querySelectorAll(".test-class");
+// 指定した要素の指定した子要素を削除する;
+// console.log(paragraphElem);
+// paragraphElem.forEach((elem) => {
+//   divElem.removeChild(elem);
+// });
+
+// const pagraphElem = document.querySelector(".test-class.hello");
+
+// 指定した要素自身を削除する
+// pagraphElem.remove();
+
+//   document.querySelectorAll(".test-class").forEach((elem) => elem.remove());
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-  // const divElem = document.getElementById("test-id");
+  // HTML要素を選択します
+  const button = document.getElementById("my-button");
 
-  // const paragraphElem = document.querySelectorAll(".test-class");
-  // 指定した要素の指定した子要素を削除する;
-  // console.log(paragraphElem);
-  // paragraphElem.forEach((elem) => {
-  //   divElem.removeChild(elem);
-  // });
+  // イベントリスナーを追加します
+  button.addEventListener("click", () => {
+    // イベントが発生したときに実行される関数を定義します
+    const test = document.getElementById("test");
+    test.textContent = "クリックされました";
+  });
 
-  // const pagraphElem = document.querySelector(".test-class.hello");
+  // マウスが要素に乗ったときのイベント
+  const div = document.getElementById("my-div");
+  div.addEventListener("mouseover", () => {
+    div.textContent = "マウスが乗っています";
+  });
 
-  // 指定した要素自身を削除する
-  // pagraphElem.remove();
+  // マウスが要素から離れたときのイベント
+  div.addEventListener("mouseout", () => {
+    div.textContent = "マウスを乗せてください";
+  });
 
-  document.querySelectorAll(".test-class").forEach((elem) => elem.remove());
+  // キーボードが押されたときのイベント
+  const keydownInput = document.getElementById("keydown-input");
+  keydownInput.addEventListener("keydown", (event) => {
+    console.log("キーが押されました:", event.key);
+  });
+
+  // キーボードが離されたときのイベント
+  keydownInput.addEventListener("keyup", (event) => {
+    console.log("キーが離されました:", event.key);
+  });
+
+  // 入力値が変更されたときのイベント
+  const nameInput = document.getElementById("name-input");
+  nameInput.addEventListener("input", () => {
+    const nameSpan = document.getElementById("name");
+    nameSpan.textContent = nameInput.value;
+  });
 });
