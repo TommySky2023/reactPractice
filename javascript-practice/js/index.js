@@ -405,17 +405,80 @@
 // console.log(Object.entries(user)); // 出力: [['name', 'Alice'], ['age', 25], ['isAdmin', true]]
 
 // 従業員データを格納したオブジェクト
-const employees = {
-  Alice: { department: "Engineering", salary: 75000 },
-  Bob: { department: "HR", salary: 45000 },
-  Carol: { department: "Marketing", salary: 55000 },
-  David: { department: "Engineering", salary: 60000 },
-};
+// const employees = {
+//   Alice: { department: "Engineering", salary: 75000 },
+//   Bob: { department: "HR", salary: 45000 },
+//   Carol: { department: "Marketing", salary: 55000 },
+//   David: { department: "Engineering", salary: 60000 },
+// };
 
-console.log(employees);
+// console.log(employees);
 
-const highEarningEmployees = Object.entries(employees)
-  .filter(([name, details]) => details.salary >= 50000)
-  .map(([name, details]) => ({ name: name, salary: details.salary }));
+// const highEarningEmployees = Object.entries(employees)
+//   .filter(([name, details]) => details.salary >= 50000)
+//   .map(([name, details]) => ({ name: name, salary: details.salary }));
 
-console.log(highEarningEmployees);
+// console.log(highEarningEmployees);
+
+// DOMが読み込まれるまで待ってから処理する時の決まり文句
+//document.addEventListener("DOMContentLoaded", () => {
+// IDに基づいて要素を取得する例
+// const testId = document.getElementById("test-id");
+// console.log(testId);
+// console.log(testId.children);
+// console.log(testId.children[0]);
+// クラス名に基づいて要素を取得する例
+// const testClassList = document.getElementsByClassName("test-class");
+// console.log(testClassList);
+// タグ名に基づいて要素を取得する例
+// const allParagraphs = document.getElementsByTagName("p");
+// console.log(allParagraphs);
+// console.log(allParagraphs[1].className);
+// CSSセレクタに基づいて要素を取得する例
+// const firstParagraph = document.querySelector("#test-id > .test-class.hello");
+// console.log(firstParagraph);
+// CSSセレクタに基づいて一致するすべての要素を取得する例
+// const allParagraphList = document.querySelectorAll(".test-class");
+// console.log(allParagraphList[1].textContent);
+//});
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   // 新しい要素を作成して追加する例
+//   const newParagraph = document.createElement("p");
+//   newParagraph.textContent = "これは新しい段落です。";
+
+//   // 属性を変更する例
+//   newParagraph.setAttribute("class", "highlight");
+
+//   // スタイルを変更する例
+//   newParagraph.style.color = "red";
+
+//   const myDiv = document.getElementById("my-div");
+//   myDiv.appendChild(newParagraph);
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const myDiv = document.getElementById("my-div");
+
+//   // 新しい要素を作成して追加する例
+//   myDiv.innerHTML =
+//     '<p class="highlight" style="color: red;">これはInnerHtmlで挿入された新しい段落です。</p>';
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // const divElem = document.getElementById("test-id");
+
+  // const paragraphElem = document.querySelectorAll(".test-class");
+  // 指定した要素の指定した子要素を削除する;
+  // console.log(paragraphElem);
+  // paragraphElem.forEach((elem) => {
+  //   divElem.removeChild(elem);
+  // });
+
+  // const pagraphElem = document.querySelector(".test-class.hello");
+
+  // 指定した要素自身を削除する
+  // pagraphElem.remove();
+
+  document.querySelectorAll(".test-class").forEach((elem) => elem.remove());
+});
