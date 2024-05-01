@@ -483,43 +483,157 @@
 //   document.querySelectorAll(".test-class").forEach((elem) => elem.remove());
 // });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   // HTML要素を選択します
+//   const button = document.getElementById("my-button");
+
+//   // イベントリスナーを追加します
+//   button.addEventListener("click", () => {
+//     // イベントが発生したときに実行される関数を定義します
+//     const test = document.getElementById("test");
+//     test.textContent = "クリックされました";
+//   });
+
+//   // マウスが要素に乗ったときのイベント
+//   const div = document.getElementById("my-div");
+//   div.addEventListener("mouseover", () => {
+//     div.textContent = "マウスが乗っています";
+//   });
+
+//   // マウスが要素から離れたときのイベント
+//   div.addEventListener("mouseout", () => {
+//     div.textContent = "マウスを乗せてください";
+//   });
+
+//   // キーボードが押されたときのイベント
+//   const keydownInput = document.getElementById("keydown-input");
+//   keydownInput.addEventListener("keydown", (event) => {
+//     console.log("キーが押されました:", event.key);
+//   });
+
+//   // キーボードが離されたときのイベント
+//   keydownInput.addEventListener("keyup", (event) => {
+//     console.log("キーが離されました:", event.key);
+//   });
+
+//   // 入力値が変更されたときのイベント
+//   const nameInput = document.getElementById("name-input");
+//   nameInput.addEventListener("input", () => {
+//     const nameSpan = document.getElementById("name");
+//     nameSpan.textContent = nameInput.value;
+//   });
+// });
+
+// 同期処理の例
+// const syncFunction = () => {
+//   console.log("1番目");
+//   console.log("2番目");
+//   console.log("3番目");
+// };
+
+// syncFunction();
+
+// 非同期処理の例
+// setTimeout(() => {
+//   console.log("1番目");
+// }, 2000);
+
+// console.log("2番目");
+// console.log("3番目");
+
+// Promiseを使った非同期処理の例;
+// const promiseTestFunc = () => {
+//   const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const success = false;
+//       if (success) {
+//         resolve("非同期処理に成功しました。");
+//       } else {
+//         reject(new Error("非同期処理に失敗しました。"));
+//       }
+//     }, 2000);
+//   });
+
+//   return promise;
+// };
+
+// promiseTestFunc()
+//   .then((data) => console.log(data))
+//   .catch((error) => console.error("Error:", error));
+
+// fetchを使ってデータを取得する例
+// async function fetchDataAsync() {
+//   fetch("https://jsonplaceholder.typicode.com/users")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       // DOMを操作する
+//       // for文を書く
+//     })
+//     .catch((error) => console.error("Fetch error:", error));
+// }
+
+// fetchDataAsync();
+
+// async/awaitを使った非同期処理の例
+const fetchDataAsync = async () => {
+  const data = { name: "yamada", email: "yamada@gmail.com" };
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+  if (!response.ok) {
+    console.error("Fetch error:", error);
+  }
+  const userList = await response.json();
+  console.log(userList);
+  return userList;
+};
+
+const appendUserList = (userList) => {
+  const userListElem = document.getElementById("user-list");
+  // 子要素を全て削除する
+  while (userListElem.firstChild) {
+    userListElem.firstChild.remove();
+  }
+
+  userList.forEach((user) => {
+    // 各データのtdを作る
+    const idTdElem = document.createElement("td");
+    idTdElem.textContent = user.id;
+
+    const nameTdElem = document.createElement("td");
+    nameTdElem.textContent = user.name;
+
+    const usernameTdElem = document.createElement("td");
+    usernameTdElem.textContent = user.username;
+
+    const phoneTdElem = document.createElement("td");
+    phoneTdElem.textContent = user.phone;
+
+    const emailTdElem = document.createElement("td");
+    emailTdElem.textContent = user.email;
+
+    const websiteTdElem = document.createElement("td");
+    websiteTdElem.textContent = user.website;
+
+    // trを作る
+    const trElem = document.createElement("tr");
+    trElem.appendChild(idTdElem);
+    trElem.appendChild(nameTdElem);
+    trElem.appendChild(usernameTdElem);
+    trElem.appendChild(phoneTdElem);
+    trElem.appendChild(emailTdElem);
+    trElem.appendChild(websiteTdElem);
+
+    const userListElem = document.getElementById("user-list");
+    userListElem.appendChild(trElem);
+  });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  // HTML要素を選択します
-  const button = document.getElementById("my-button");
-
-  // イベントリスナーを追加します
-  button.addEventListener("click", () => {
-    // イベントが発生したときに実行される関数を定義します
-    const test = document.getElementById("test");
-    test.textContent = "クリックされました";
-  });
-
-  // マウスが要素に乗ったときのイベント
-  const div = document.getElementById("my-div");
-  div.addEventListener("mouseover", () => {
-    div.textContent = "マウスが乗っています";
-  });
-
-  // マウスが要素から離れたときのイベント
-  div.addEventListener("mouseout", () => {
-    div.textContent = "マウスを乗せてください";
-  });
-
-  // キーボードが押されたときのイベント
-  const keydownInput = document.getElementById("keydown-input");
-  keydownInput.addEventListener("keydown", (event) => {
-    console.log("キーが押されました:", event.key);
-  });
-
-  // キーボードが離されたときのイベント
-  keydownInput.addEventListener("keyup", (event) => {
-    console.log("キーが離されました:", event.key);
-  });
-
-  // 入力値が変更されたときのイベント
-  const nameInput = document.getElementById("name-input");
-  nameInput.addEventListener("input", () => {
-    const nameSpan = document.getElementById("name");
-    nameSpan.textContent = nameInput.value;
+  const fetchButtonElem = document.getElementById("fetch-button");
+  fetchButtonElem.addEventListener("click", async () => {
+    const userList = await fetchDataAsync();
+    appendUserList(userList);
   });
 });

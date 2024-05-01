@@ -7,3 +7,22 @@
   width: 200px;
   height: 200px;
 }
+
+.user-list {
+  border-collapse: collapse;
+}
+
+.user-list,
+th,
+td {
+  border: 1px solid #333;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+th {
+  background-color: #bbbbbb;
+}
