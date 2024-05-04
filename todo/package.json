@@ -7,12 +7,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint js",
-    "lint:fix": "eslint js --fix"
+    "lint:fix": "eslint js --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "author": "shibata-masahito",
   "license": "ISC",
   "devDependencies": {
-    "@eslint/js": "^9.1.1",
-    "eslint": "^9.1.1"
+    "@eslint/js": "9.1.1",
+    "eslint": "9.1.1",
+    "prettier": "3.2.5"
   }
 }
