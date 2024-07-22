@@ -5,7 +5,11 @@ import {
   getNewTodo,
   removeTodoListElement,
 } from "./todo";
-import { getElementById, getInputElementById } from "./utils/dom";
+import {
+  createElement,
+  getElementById,
+  getInputElementById,
+} from "./utils/dom";
 
 let todoList: Todo[] = [];
 let filterWord: string = "";
