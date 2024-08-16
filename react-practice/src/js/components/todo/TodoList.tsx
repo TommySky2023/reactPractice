@@ -1,13 +1,16 @@
 import * as React from "react";
 import { TodoItem } from "./TodoItem";
 import { Todo } from "../../types/todo";
+import { memo } from "react";
 
 type Props = {
   todoList: Todo[];
   deleteTodo: (id: number) => void;
 };
 
-export const TodoList = ({ todoList, deleteTodo }: Props) => {
+export const TodoList = memo(({ todoList, deleteTodo }: Props) => {
+  console.log("TodoListコンポーネントのレンダー");
+
   return (
     <ul className="bg-emerald-100 p-4 rounded">
       <li className="grid grid-cols-4 font-bold">
@@ -28,4 +31,4 @@ export const TodoList = ({ todoList, deleteTodo }: Props) => {
       ))}
     </ul>
   );
-};
+});
