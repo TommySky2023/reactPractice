@@ -1,5 +1,5 @@
 import { fireEvent, render } from "@testing-library/react";
-import { NewTodoForm } from "./NewTodoForm";
+import { NewTodoForm } from ".";
 import React from "react";
 import { screen } from "@testing-library/dom";
 
