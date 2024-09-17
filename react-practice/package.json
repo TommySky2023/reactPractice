@@ -11,12 +11,24 @@
     "format:check": "prettier . --check",
     "build": "webpack --mode production",
     "build:dev": "webpack",
-    "dev": "webpack serve --mode development"
+    "dev": "webpack serve --mode development",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "shibata-masahito",
   "license": "ISC",
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
     "@eslint/js": "9.1.1",
+    "@storybook/addon-essentials": "^8.3.1",
+    "@storybook/addon-interactions": "^8.3.1",
+    "@storybook/addon-links": "^8.3.1",
+    "@storybook/addon-onboarding": "^8.3.1",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.3.1",
+    "@storybook/react": "^8.3.1",
+    "@storybook/react-webpack5": "^8.3.1",
+    "@storybook/test": "^8.3.1",
     "@testing-library/jest-dom": "6.5.0",
     "@testing-library/react": "16.0.1",
     "@types/jest": "29.5.13",
@@ -25,11 +37,13 @@
     "autoprefixer": "10.4.20",
     "css-loader": "7.1.1",
     "eslint": "9.1.1",
+    "eslint-plugin-storybook": "^0.8.0",
     "html-webpack-plugin": "5.6.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "mini-css-extract-plugin": "2.9.0",
     "prettier": "3.2.5",
+    "storybook": "^8.3.1",
     "style-loader": "4.0.0",
     "ts-jest": "29.2.5",
     "ts-loader": "9.5.1",
@@ -48,5 +62,10 @@
     "react-dom": "18.3.1",
     "react-router-dom": "6.26.1",
     "zustand": "4.5.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
